@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Montalvão Verifica Leads",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["fetchDocument.js"],
+        "all_frames": false,
+        "match_origin_as_fallback": false,
+        "match_about_blank": false,
+        "run_at": "document_idle",
+        "world": "ISOLATED"
+      }
+    ]
+   }
